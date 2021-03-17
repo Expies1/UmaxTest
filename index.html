@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+    <section class="page">
+        <div class="wr">
+            <div class="page__title">
+                Калькулятор <span>калорий</span>
+            </div>
+            <form class="page__form">
+                <div class="page__form-col1">
+                    <div class="page__userName">
+                        <div class="page__userName-title">
+                            ФИО<span>*</span>
+                        </div>
+                        <input type="text" placeholder="Иванов Иван Иванович">
+                    </div>
+                    <div class="page__userNamber">
+                        <div class="page__userNamber-title">
+                            Номер телефона<span>*</span>
+                        </div>
+                        <input type="tel" placeholder="+7 (900) ___-__-__">
+                    </div>
+                    <div class="page__userAddress">
+                        <div class="page__userAddress-title">
+                            Адрес доставки<span>*</span>
+                        </div>
+                        <input type="text" placeholder="ул. М. Нагибина, 48, п.1, кв.2">
+                    </div>
+                </div>
+                <div class="page__form-col2">
+                    <div class="page__comfortableTime">
+                        <div class="page__comfortableTime-title">
+                            Удобное время<span>*</span>
+                        </div>
+                        <div class="page__comfortableTime-select">
+                            <div class="page__comfortableTime-select-top">
+                                <div class="page__comfortableTime-select-top-wr" data-id="1">
+                                    с 8:00 до 12:00
+                                </div>
+                                <svg class="arrow" width="13" height="6" viewBox="0 0 13 6" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.49999 5.83665C6.31502 5.83702 6.13576 5.77243 5.99333 5.6541L1.24333 1.68552C1.08166 1.55079 0.979987 1.3572 0.960686 1.14732C0.941386 0.937438 1.00603 0.728468 1.14041 0.566377C1.27479 0.404287 1.46788 0.302355 1.67722 0.283005C1.88656 0.263654 2.09499 0.32847 2.25666 0.463194L6.49999 4.01904L10.7433 0.590189C10.8243 0.524259 10.9175 0.475023 11.0175 0.445313C11.1175 0.415603 11.2224 0.406004 11.3261 0.417067C11.4299 0.428131 11.5304 0.459639 11.6219 0.509781C11.7135 0.559923 11.7942 0.627711 11.8596 0.709247C11.9321 0.790858 11.987 0.886601 12.0209 0.990477C12.0547 1.09435 12.0669 1.20413 12.0565 1.31291C12.046 1.4217 12.0133 1.52717 11.9604 1.6227C11.9074 1.71823 11.8354 1.80176 11.7487 1.86807L6.99874 5.70172C6.85222 5.80135 6.67662 5.84885 6.49999 5.83665Z"/>
+                                </svg>
+                            </div>
+                            <div class="page__comfortableTime-select-bottom">
+                                <div class="page__comfortableTime-select-bottom-item" data-id="1">
+                                    с 8:00 до 12:00
+                                </div>
+                                <div class="page__comfortableTime-select-bottom-item" data-id="2">
+                                    с 12:00 до 16:00
+                                </div>
+                                <div class="page__comfortableTime-select-bottom-item" data-id="3">
+                                    с 16:00 до 20:00
+                                </div>
+                                <div class="page__comfortableTime-select-bottom-item" data-id="4">
+                                    с 20:00 до 00:00
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page__userIndicators">
+                        <div class="page__userIndicators-age">
+                            <div class="page__userIndicators-age-title">
+                                Возраст, лет
+                            </div>  
+                            <input type="number" class="inputAge" value="0" id='js-inputAge' min="0">
+                            <svg class="plus plus--age" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 0L9.33013 5.5H0.669873L5 0Z" fill="#CDCDCD"/>
+                            </svg>
+                            <svg class="minus minus--age" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 5.66669L9.33013 0.166687H0.669873L5 5.66669Z" fill="#CDCDCD"/>
+                            </svg>   
+                        </div>
+                        <div class="page__userIndicators-weight">
+                            <div class="page__userIndicators-weight-title">
+                                Вес, в кг
+                            </div>  
+                            <input type="number" class="inputWeight" value="0" id="js-inputWeight">
+                            <svg class="plus plus--weight" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 0L9.33013 5.5H0.669873L5 0Z" fill="#CDCDCD"/>
+                            </svg>
+                            <svg class="minus minus--weight" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 5.66669L9.33013 0.166687H0.669873L5 5.66669Z" fill="#CDCDCD"/>
+                            </svg>   
+                        </div>
+                        <div class="page__userIndicators-growth">
+                            <div class="page__userIndicators-growth-title">
+                                Рост, в см
+                            </div>  
+                            <input type="number" class="inputGrowth" value="0" id='js-inputGrowth'>
+                            <svg class="plus plus--growth" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 0L9.33013 5.5H0.669873L5 0Z" fill="#CDCDCD"/>
+                            </svg>
+                            <svg class="minus minus--growth" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 5.66669L9.33013 0.166687H0.669873L5 5.66669Z" fill="#CDCDCD"/>
+                            </svg>   
+                        </div>
+                        <div class="page__userIndicators-gender">
+                            <div class="page__userIndicators-gender-title">
+                                Пол
+                            </div>
+                            <div class="page__choose-gender">
+                                <div class="page__userIndicators-gender-choose">
+                                    <input type="radio" id="1" name="gender" value="man">
+                                    <label for="1">Мужчина</label>
+                                    <svg width="14" height="10" viewBox="0 0 14 10" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.727447 5.94304C0.33039 5.56125 0.33039 4.9259 0.727447 4.54411C1.10308 4.18292 1.69693 4.18292 2.07257 4.54411L4.3069 6.69251C4.69401 7.06473 5.306 7.06473 5.69312 6.69251L11.9274 0.697956C12.3031 0.336769 12.8969 0.33677 13.2726 0.697957C13.6696 1.07974 13.6696 1.7151 13.2726 2.09688L5.69311 9.38482C5.306 9.75704 4.69401 9.75704 4.3069 9.38482L0.727447 5.94304Z"/>
+                                    </svg>
+                                        
+                                </div>
+                                <div class="page__userIndicators-gender-choose">
+                                    <input type="radio" id="2" name="gender" value="wooman">
+                                    <label for="2">Женщина</label>
+                                    <svg width="14" height="10" viewBox="0 0 14 10" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.727447 5.94304C0.33039 5.56125 0.33039 4.9259 0.727447 4.54411C1.10308 4.18292 1.69693 4.18292 2.07257 4.54411L4.3069 6.69251C4.69401 7.06473 5.306 7.06473 5.69312 6.69251L11.9274 0.697956C12.3031 0.336769 12.8969 0.33677 13.2726 0.697957C13.6696 1.07974 13.6696 1.7151 13.2726 2.09688L5.69311 9.38482C5.306 9.75704 4.69401 9.75704 4.3069 9.38482L0.727447 5.94304Z"/>
+                                    </svg>
+                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page__form-col3">
+                    <div class="page__activity">
+                        <div class="page__activity-title">
+                            Степень физической активности (А)
+                            <svg width="21" class="moreInfo" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.5 1.75C5.67525 1.75 1.75 5.67525 1.75 10.5C1.75 15.3247 5.67525 19.25 10.5 19.25C15.3247 19.25 19.25 15.3247 19.25 10.5C19.25 5.67525 15.3247 1.75 10.5 1.75ZM10.5 17.5C6.64038 17.5 3.5 14.3596 3.5 10.5C3.5 6.64038 6.64038 3.5 10.5 3.5C14.3596 3.5 17.5 6.64038 17.5 10.5C17.5 14.3596 14.3596 17.5 10.5 17.5Z" fill="#00BC35"/>
+                                <path d="M9.625 9.625H11.375V14.875H9.625V9.625ZM9.625 6.125H11.375V7.875H9.625V6.125Z" fill="#00BC35"/>
+                            </svg>
+                        </div>
+                        <div class="page__activity-notation">
+                            <div class="page__activity-notation-item">
+                                <div class="page__activity-notation-title">
+                                    Минимальная активность
+                                </div>
+                                <div class="page__activity-notation-description">
+                                    минимальная активность, сидячая работа, не требующая значительных физических нагрузок;
+                                </div>
+                            </div>
+                            <div class="page__activity-notation-item">
+                                <div class="page__activity-notation-title">
+                                    Высокая активность
+                                </div>
+                                <div class="page__activity-notation-description">
+                                    тяжелая или трудоемкая активность: интенсивные упражнения и занятия спортом 5-7 дней в неделю. Трудоемкие занятия также подходят для этого уровня, они включают строительные работы (кирпичная кладка, столярное дело и т. д.), занятость в сельском хозяйстве и т. п.;
+                                </div>
+                            </div>
+                            <div class="page__activity-notation-item">
+                                <div class="page__activity-notation-title">
+                                    Слабая активность
+                                </div>
+                                <div class="page__activity-notation-description">
+                                    слабый уровень активности: интенсивные упражнения не менее 20 минут один-три раза в неделю. Это может быть езда на велосипеде, бег трусцой, баскетбол, плавание, катание на коньках и т. д. Если вы не тренируетесь регулярно, но сохраняете занятый стиль жизни, который требует частой ходьбы в течение длительного времени, то выберите этот коэффициент;
+                                </div>
+                            </div>
+                            <div class="page__activity-notation-item">
+                                <div class="page__activity-notation-title">
+                                    Экстремальная активность
+                                </div>
+                                <div class="page__activity-notation-description">
+                                    экстремальный уровень: включает чрезвычайно активные и/или очень энергозатратные виды деятельности: занятия спортом с почти ежедневным графиком и несколькими тренировками в течение дня; очень трудоемкая работа, например, сгребание угля или длительный рабочий день на сборочной линии. Зачастую этого уровня активности очень трудно достичь.                                </div>
+                            </div>
+                            <div class="page__activity-notation-item">
+                                <div class="page__activity-notation-title">
+                                    Умеренная активность                                
+                                </div>
+                                <div class="page__activity-notation-description">
+                                    умеренный уровень активности: интенсивная тренировка не менее 30-60 мин три-четыре раза в неделю (любой из перечисленных выше видов спорта);
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page__activity-select">
+                            <div class="page__activity-select-top">
+                                <div class="page__activity-select-top-wr" data-id="1" data-value="1.2">
+                                    Минимальная активность
+                                </div>
+                                <svg class="arrow" width="13" height="6" viewBox="0 0 13 6" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.49999 5.83665C6.31502 5.83702 6.13576 5.77243 5.99333 5.6541L1.24333 1.68552C1.08166 1.55079 0.979987 1.3572 0.960686 1.14732C0.941386 0.937438 1.00603 0.728468 1.14041 0.566377C1.27479 0.404287 1.46788 0.302355 1.67722 0.283005C1.88656 0.263654 2.09499 0.32847 2.25666 0.463194L6.49999 4.01904L10.7433 0.590189C10.8243 0.524259 10.9175 0.475023 11.0175 0.445313C11.1175 0.415603 11.2224 0.406004 11.3261 0.417067C11.4299 0.428131 11.5304 0.459639 11.6219 0.509781C11.7135 0.559923 11.7942 0.627711 11.8596 0.709247C11.9321 0.790858 11.987 0.886601 12.0209 0.990477C12.0547 1.09435 12.0669 1.20413 12.0565 1.31291C12.046 1.4217 12.0133 1.52717 11.9604 1.6227C11.9074 1.71823 11.8354 1.80176 11.7487 1.86807L6.99874 5.70172C6.85222 5.80135 6.67662 5.84885 6.49999 5.83665Z"/>
+                                </svg>
+                            </div>
+                            <div class="page__activity-select-bottom">
+                                <div class="page__activity-select-bottom-item" data-id="1" data-value="1.2">
+                                    Минимальная активность
+                                </div>
+                                <div class="page__activity-select-bottom-item" data-id="2" data-value="1.374">
+                                    Слабая активность
+                                </div>
+                                <div class="page__activity-select-bottom-item" data-id="3" data-value="1.55">
+                                    Умеренная активность
+                                </div>
+                                <div class="page__activity-select-bottom-item" data-id="4" data-value="1.7">
+                                    Тяжелая активность
+                                </div>
+                                <div class="page__activity-select-bottom-item" data-id="5" data-value="1.9">
+                                    Экстремальная активность
+                                </div>
+                        </div>
+                    </div>
+                    <div class="page__typeTraining">
+                        <div class="page__typeTraining-title">
+                            Вы хотите
+                        </div>
+                        <div class="page__typeTraining-select">
+                            <div class="page__typeTraining-select-top">
+                                <div class="page__typeTraining-select-top-wr" data-id="1">
+                                    Набрать вес
+                                </div>
+                                <svg class="arrow" width="13" height="6" viewBox="0 0 13 6" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.49999 5.83665C6.31502 5.83702 6.13576 5.77243 5.99333 5.6541L1.24333 1.68552C1.08166 1.55079 0.979987 1.3572 0.960686 1.14732C0.941386 0.937438 1.00603 0.728468 1.14041 0.566377C1.27479 0.404287 1.46788 0.302355 1.67722 0.283005C1.88656 0.263654 2.09499 0.32847 2.25666 0.463194L6.49999 4.01904L10.7433 0.590189C10.8243 0.524259 10.9175 0.475023 11.0175 0.445313C11.1175 0.415603 11.2224 0.406004 11.3261 0.417067C11.4299 0.428131 11.5304 0.459639 11.6219 0.509781C11.7135 0.559923 11.7942 0.627711 11.8596 0.709247C11.9321 0.790858 11.987 0.886601 12.0209 0.990477C12.0547 1.09435 12.0669 1.20413 12.0565 1.31291C12.046 1.4217 12.0133 1.52717 11.9604 1.6227C11.9074 1.71823 11.8354 1.80176 11.7487 1.86807L6.99874 5.70172C6.85222 5.80135 6.67662 5.84885 6.49999 5.83665Z"/>
+                                </svg>
+                            </div>
+                            <div class="page__typeTraining-select-bottom">
+                                <div class="page__typeTraining-select-bottom-item" data-id="1">
+                                    Набрать вес
+                                </div>
+                                <div class="page__typeTraining-select-bottom-item" data-id="2">
+                                    Сбросить вес
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page__restrictions">
+                        <div class="page__restrictions-title">
+                            Есть ли ограничения в питании или аллергия?
+                        </div>
+                        <input type="text" placeholder="_">
+                    </div>
+                </div>
+                </div>
+            <div class="page__form-col4">
+                <div class="page__textarea">
+                    <div class="page__textarea-title">
+                        Продукты, которые не хотите включать в рацион
+                    </div>
+                    <textarea placeholder="картошка, хлеб"></textarea>
+                </div>
+                <div class="page__processing">
+                    <div class="page__processing-slider">
+                        <div class="page__processing-slider-circle">
+
+                        </div>
+                        <div class="page__processing-slider-oval">
+                            
+                        </div>
+                    </div>
+                    <div class="page__processing-text">
+                        Согласие на обработку <a href="#">Персональных данных</a>
+                    </div>
+                </div>
+                <button class="page__processing-btn" type="button">Рассчитать</button>
+            </div>
+                
+            </form>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="wr">
+            <div class="footer__result">
+                <div class="footer__result-title">
+                    Результат:
+                </div>
+                <div class="footer__result-calcResult">
+                    <div class="footer__result-computation">
+                        0
+                    </div>
+                    &nbsp;калорий/день
+                </div>
+                <div class="footer__result-diet">
+                    <div class="footer__result-diet-title">
+                        Подходящие рационы:
+                    </div>
+                    <div class="footer__result-diet-items">
+                        <div class="footer__result-diet-item">
+                            <div class="footer__result-diet-item-title">
+                                Express Fit
+                            </div>
+                            <div class="footer__result-diet-item-description">
+                                Похудей быстро
+                            </div>
+                            <div class="footer__result-diet-item-image">
+                                <img src="images/dietImage1.png" alt="">
+                            </div>
+                        </div>
+                        <div class="footer__result-diet-item">
+                            <div class="footer__result-diet-item-title">
+                                Super Fit
+                            </div>
+                            <div class="footer__result-diet-item-description">
+                                Похудей активно
+                            </div>
+                            <div class="footer__result-diet-item-image">
+                                <img src="images/dietImage2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="footer__result-diet-item">
+                            <div class="footer__result-diet-item-title">
+                                Fit
+                            </div>
+                            <div class="footer__result-diet-item-description">
+                                Похудей комфортно
+                            </div>
+                            <div class="footer__result-diet-item-image">
+                                <img src="images/dietImage3.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.min.js"></script>
+</body>
+</html>
